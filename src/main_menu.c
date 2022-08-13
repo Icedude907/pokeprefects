@@ -37,6 +37,8 @@
 #include "window.h"
 #include "mystery_gift_menu.h"
 
+#include "credits.h"
+
 /*
  * Main menu state machine
  * -----------------------
@@ -1769,7 +1771,6 @@ static void Task_NewGameBirchSpeech_FadePlayerToWhite(u8 taskId)
         gTasks[taskId].func = Task_NewGameBirchSpeech_Cleanup;
     }
 }
-
 static void Task_NewGameBirchSpeech_Cleanup(u8 taskId)
 {
     if (!gPaletteFade.active)
@@ -1777,7 +1778,9 @@ static void Task_NewGameBirchSpeech_Cleanup(u8 taskId)
         FreeAllWindowBuffers();
         FreeAndDestroyMonPicSprite(gTasks[taskId].tLotadSpriteId);
         ResetAllPicSprites();
-        SetMainCallback2(CB2_NewGame);
+        // SetMainCallback2(CB2_NewGame);
+        // FIXME Skip credits straight to the end?
+        SetMainCallback2(CB2_StartCreditsSequence);
         DestroyTask(taskId);
     }
 }
