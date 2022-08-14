@@ -1,6 +1,4 @@
-@ \n moves to next line
-@ \p pauses and clears screen on a press
-@ \l feeds lines up (after a press?)
+@ comment
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you waiting!\p"
 	.string "Welcome to the world of GAMERS!\p"
@@ -21,7 +19,7 @@ gText_Birch_MainSpeech::
 	.string "they typically live inside the\l"
 	.string "basements of humans they call their parents.\p"
 	.string "At times we dain to interact as\n"
-	.string "playmates, and at times as\l" @ TESTME
+	.string "playmates, and at times as\l"
 	.string "player two in CO-OP GAMES.\p"
 	.string "And sometimes, they band together\n"
 	.string "and battle others like them,\l"
@@ -62,4 +60,4 @@ gText_Birch_AreYouReady::
 	.string "Your very own GAMING adventure\n"
 	.string "is about to unfold.\p"
 	.string "Take courage, and leap into the\n"
-	.string "world of GAY $"
+	.string "world of GAy$"
