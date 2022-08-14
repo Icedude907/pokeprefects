@@ -52,7 +52,10 @@ Music could be replaced with soundbites of gamers screaming
 
 TODO:
 - [x] GAMER sprite
-- May sprites (front / tiles)
+- [x] May sprites (front / tiles)
 - [x] Mod in credits
+- [x] Instant cut to the end. (TODO: bug fixes)
 - [?] Prefects ball
-- Instant cut to the end.
+- Change title screen
+- [wow] Place name in opening copyright
+- [ ] sample replacement

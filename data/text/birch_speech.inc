@@ -17,14 +17,14 @@ gText_Birch_Pokemon::
 gText_Birch_MainSpeech::
 	.string "This world is widely inhabited by\n"
 	.string "creatures known as GAMERS.\p"
-	.string "We normies live alongside GAMERS,\p"
-	.string "as they typically live inside the\n"
-	.string "basements of humans they call their parents\p"
-	.string "at times we dain to interact as\n"
+	.string "We normies live alongside GAMERS,\n"
+	.string "they typically live inside the\l"
+	.string "basements of humans they call their parents.\p"
+	.string "At times we dain to interact as\n"
 	.string "playmates, and at times as\l" @ TESTME
 	.string "player two in CO-OP GAMES.\p"
 	.string "And sometimes, they band together\n"
-	.string "and battle others like them,\p"
+	.string "and battle others like them,\l"
  	.string "in hypercompetitive button mashing.\p"
 
 	.string "But despite our closeness, we don't\n"

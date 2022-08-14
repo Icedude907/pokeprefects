@@ -418,9 +418,9 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
     [PAGE_LEAD_PROGRAMMER] = {
         sCreditsEntry_LeadProgrammer,
         sCreditsEntry_HisashiSogabe,
+        sCreditsEntry_JonathanGoldsmith,
         sCreditsEntry_LeadGraphicArtist,
         sCreditsEntry_MotofumiFujiwara,
-        sCreditsEntry_JonathanGoldsmith,
     },
     [PAGE_PROGRAMMERS_1] = {
         sCreditsEntry_Programmers,
@@ -483,7 +483,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         sCreditsEntry_SoundEffectsAndPkmnVoices,
         sCreditsEntry_GoIchinose,
         sCreditsEntry_MorikazuAoki,
-        _,
+        sCreditsEntry_JonathanGoldsmith,
     },
     [PAGE_GAME_DESIGNERS_1] = {
         sCreditsEntry_GameDesigners,
@@ -518,7 +518,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         sCreditsEntry_AkihitoTomisawa,
         sCreditsEntry_HitomiSato,
         sCreditsEntry_ToshinobuMatsumiya,
-        _,
+        sCreditsEntry_JonathanGoldsmith,
     },
     [PAGE_SCRIPT_DESIGNERS] = {
         sCreditsEntry_ScriptDesigners,

@@ -1745,7 +1745,7 @@ static void Task_NewGameBirchSpeech_ShrinkPlayer(u8 taskId)
             gSprites[spriteId].callback = SpriteCB_MovePlayerDownWhileShrinking;
             BeginNormalPaletteFade(PALETTES_BG, 0, 0, 16, RGB_BLACK);
             FadeOutBGM(4);
-            gTasks[taskId].func = Task_NewGameBirchSpeech_WaitForPlayerShrink;
+            gTasks[taskId].func = Task_NewGameBirchSpeech_Cleanup; // Should result in a near instant cut
         }
     }
 }
@@ -1781,6 +1781,7 @@ static void Task_NewGameBirchSpeech_Cleanup(u8 taskId)
         // SetMainCallback2(CB2_NewGame);
         // FIXME Skip credits straight to the end?
         SetMainCallback2(CB2_StartCreditsSequence);
+        // SetMainCallback2(CB2_Credits);
         DestroyTask(taskId);
     }
 }

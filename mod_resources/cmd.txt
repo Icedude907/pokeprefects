@@ -1,0 +1,1 @@
+ffmpeg.exe -i "\pokeemerald\mod_resources\agkaudio.webm" -ar "10512" -ac 1 -acodec "pcm_s8" -ss 22.5 -t 1.80 agkaudio.aif
