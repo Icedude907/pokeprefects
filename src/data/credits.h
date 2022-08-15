@@ -63,8 +63,8 @@ enum
 #define ENTRIES_PER_PAGE 5
 
 static const u8 sCreditsText_EmptyString[]                    = _("");
-static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("POKéMON PREFECT'S BALL VERSION");
-static const u8 sCreditsText_Credits[]                        = _("Credits");
+static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("POKéMON EMERALD VERSION");
+static const u8 sCreditsText_Credits[]                        = _("Original Credits");
 static const u8 sCreditsText_ExecutiveDirector[]              = _("Executive Director");
 static const u8 sCreditsText_Director[]                       = _("Director");
 static const u8 sCreditsText_ArtDirector[]                    = _("Art Director");
@@ -221,7 +221,10 @@ static const u8 sCreditsText_MotoyasuTojima[]                 = _("Motoyasu Toji
 static const u8 sCreditsText_NicolaPrattBarlow[]              = _("Nicola Pratt-Barlow");
 static const u8 sCreditsText_ShellieDow[]                     = _("Shellie Dow");
 static const u8 sCreditsText_ErikJohnson[]                    = _("Erik Johnson");
-static const u8 sCreditsText_JonathanGoldsmith[]              = _("Jonathan Goldsmith");
+
+static const u8 sCreditsText_PokePrefectsVersion[]            = _("POKéMON PREFECT'S VERSION");
+static const u8 sCreditsText_JonathanGoldsmith[]              = _("by Jonathan Goldsmith");
+
 static const struct CreditsEntry sCreditsEntry_EmptyString[]                    = { 0, FALSE, sCreditsText_EmptyString};
 static const struct CreditsEntry sCreditsEntry_PkmnEmeraldVersion[]             = { 7,  TRUE, sCreditsText_PkmnEmeraldVersion};
 static const struct CreditsEntry sCreditsEntry_Credits[]                        = {11,  TRUE, sCreditsText_Credits};
@@ -382,45 +385,46 @@ static const struct CreditsEntry sCreditsEntry_NicolaPrattBarlow[]              
 static const struct CreditsEntry sCreditsEntry_ShellieDow[]                     = { 0, FALSE, sCreditsText_ShellieDow};
 static const struct CreditsEntry sCreditsEntry_ErikJohnson[]                    = { 0, FALSE, sCreditsText_ErikJohnson};
 
+static const struct CreditsEntry sCreditsEntry_PokePrefectsVersion[]            = { 0,  TRUE, sCreditsText_PokePrefectsVersion};
 static const struct CreditsEntry sCreditsEntry_JonathanGoldsmith[]              = { 0, FALSE, sCreditsText_JonathanGoldsmith};
 
 #define _ sCreditsEntry_EmptyString
 static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][ENTRIES_PER_PAGE] =
 {
     [PAGE_TITLE] = {
+        sCreditsEntry_PokePrefectsVersion,
+        sCreditsEntry_JonathanGoldsmith,
         _,
         sCreditsEntry_PkmnEmeraldVersion,
         sCreditsEntry_Credits,
-        _,
-        _
     },
     [PAGE_DIRECTOR] = {
         _,
         sCreditsEntry_Director,
         sCreditsEntry_ShigekiMorimoto,
-        sCreditsEntry_JonathanGoldsmith,
+        _,
         _,
     },
     [PAGE_ART_DIRECTOR] = {
         _,
         sCreditsEntry_ArtDirector,
         sCreditsEntry_KenSugimori,
-        sCreditsEntry_JonathanGoldsmith,
+        _,
         _,
     },
     [PAGE_WORLD_DIRECTOR] = {
         _,
         sCreditsEntry_WorldDirector,
         sCreditsEntry_JunichiMasuda,
-        sCreditsEntry_JonathanGoldsmith,
+        _,
         _,
     },
     [PAGE_LEAD_PROGRAMMER] = {
         sCreditsEntry_LeadProgrammer,
         sCreditsEntry_HisashiSogabe,
-        sCreditsEntry_JonathanGoldsmith,
         sCreditsEntry_LeadGraphicArtist,
         sCreditsEntry_MotofumiFujiwara,
+        _,
     },
     [PAGE_PROGRAMMERS_1] = {
         sCreditsEntry_Programmers,
@@ -483,7 +487,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         sCreditsEntry_SoundEffectsAndPkmnVoices,
         sCreditsEntry_GoIchinose,
         sCreditsEntry_MorikazuAoki,
-        sCreditsEntry_JonathanGoldsmith,
+        _,
     },
     [PAGE_GAME_DESIGNERS_1] = {
         sCreditsEntry_GameDesigners,
@@ -518,7 +522,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         sCreditsEntry_AkihitoTomisawa,
         sCreditsEntry_HitomiSato,
         sCreditsEntry_ToshinobuMatsumiya,
-        sCreditsEntry_JonathanGoldsmith,
+        _,
     },
     [PAGE_SCRIPT_DESIGNERS] = {
         sCreditsEntry_ScriptDesigners,

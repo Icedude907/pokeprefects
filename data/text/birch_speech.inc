@@ -60,4 +60,4 @@ gText_Birch_AreYouReady::
 	.string "Your very own GAMING adventure\n"
 	.string "is about to unfold.\p"
 	.string "Take courage, and leap into the\n"
-	.string "world of GAy$"
+	.string "world of GAY{PAUSE 5}$"

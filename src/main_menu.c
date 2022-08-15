@@ -1728,24 +1728,17 @@ static void Task_NewGameBirchSpeech_AreYouReady(u8 taskId)
     }
 }
 
+// No longer really about shrinking the player.
 static void Task_NewGameBirchSpeech_ShrinkPlayer(u8 taskId)
 {
     u8 spriteId;
 
     if (gTasks[taskId].tIsDoneFadingSprites)
     {
-        gSprites[gTasks[taskId].tPlayerSpriteId].oam.objMode = ST_OAM_OBJ_NORMAL;
         if (!RunTextPrintersAndIsPrinter0Active())
         {
-            spriteId = gTasks[taskId].tPlayerSpriteId;
-            gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
-            gSprites[spriteId].affineAnims = sSpriteAffineAnimTable_PlayerShrink;
-            InitSpriteAffineAnim(&gSprites[spriteId]);
-            StartSpriteAffineAnim(&gSprites[spriteId], 0);
-            gSprites[spriteId].callback = SpriteCB_MovePlayerDownWhileShrinking;
-            BeginNormalPaletteFade(PALETTES_BG, 0, 0, 16, RGB_BLACK);
             FadeOutBGM(4);
-            gTasks[taskId].func = Task_NewGameBirchSpeech_Cleanup; // Should result in a near instant cut
+            gTasks[taskId].func = Task_NewGameBirchSpeech_Cleanup; // Should result in just enough waiting when combined with the updated text
         }
     }
 }
@@ -1779,9 +1772,8 @@ static void Task_NewGameBirchSpeech_Cleanup(u8 taskId)
         FreeAndDestroyMonPicSprite(gTasks[taskId].tLotadSpriteId);
         ResetAllPicSprites();
         // SetMainCallback2(CB2_NewGame);
-        // FIXME Skip credits straight to the end?
+        // TODO? Skip credits straight to the end?
         SetMainCallback2(CB2_StartCreditsSequence);
-        // SetMainCallback2(CB2_Credits);
         DestroyTask(taskId);
     }
 }
